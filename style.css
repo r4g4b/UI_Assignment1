@@ -2,6 +2,7 @@
     --bg: #ffffff;
     --text: #0a0a0a;
     --box: #f0f0f0;
+    --accent: #262626;
 }
 
 * {
@@ -40,7 +41,7 @@ section {
 
 header {
     background-color: var(--box);
-    border-bottom: 2px solid #262626;
+    border-bottom: 2px solid var(--accent);
     padding: 10px 15px;
     display: flex;
     flex-wrap: wrap;
@@ -70,7 +71,6 @@ nav ul li a {
     text-decoration: none;
     padding: 5px;
     border-radius: 5px;
-    transition: background-color 0.5s, color 0.5s;
 }
 
 nav ul li a:hover {
@@ -79,16 +79,17 @@ nav ul li a:hover {
 }
 
 .toggle-label {
-    border: 1px solid #262626;
+    border: 1px solid var(--accent);
     padding: 5px;
     border-radius: 5px;
     cursor: pointer;
     color: var(--text);
-    transition: background-color 0.5s, color 0.5s;
 }
 
 .toggle-label:hover {
+    /* updated */
     background-color: var(--text);
+    /* updated */
     color: var(--bg);
 }
 
@@ -99,11 +100,11 @@ nav ul li a:hover {
 }
 
 .card {
+    /* updated */
     background-color: var(--box);
     border: 2px dashed #787676f5;
     border-radius: 6px;
     padding: 10px;
-    transition: border-color 0.5s;
 }
 
 .card:hover {
@@ -152,7 +153,6 @@ button {
     font-size: 16px;
     text-decoration: none;
     cursor: pointer;
-    transition: background-color 0.5s;
 }
 
 .button:hover,
@@ -233,7 +233,7 @@ input[type="range"] {
 
 footer {
     background-color: var(--box);
-    border-top: 2px solid #262626;
+    border-top: 2px solid var(--accent);
     padding: 15px;
     text-align: center;
 }
@@ -254,7 +254,6 @@ footer {
     text-decoration: none;
     border-radius: 5px;
     padding: 5px 5px;
-    transition: background-color 0.5s;
 }
 
 .social a:hover {
@@ -270,26 +269,13 @@ footer {
     --bg: #0f0f0f;
     --text: #d9d7d7;
     --box: #1f1f1f;
+    --accent: #cfcfcf;
     background-color: var(--bg);
     color: var(--text);
 }
 
-#dark-toggle:checked~#page header,
-#dark-toggle:checked~#page .card,
-#dark-toggle:checked~#page footer {
+#dark-toggle:checked~#page .card {
     border-color: #3a3a3a;
-}
-
-#dark-toggle:checked~#page header {
-    border-bottom-color: #cfcfcf;
-}
-
-#dark-toggle:checked~#page footer {
-    border-top-color: #cfcfcf;
-}
-
-#dark-toggle:checked~#page .toggle-label {
-    border-color: #cfcfcf;
 }
 
 #dark-toggle:checked~#page input[type="text"],
@@ -335,7 +321,6 @@ footer {
     background-color: #b5b5b5;
 }
 
-/* Desktop is the default layout */
 /* Phone */
 @media (min-width: 375px) {
     .cards {
