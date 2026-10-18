@@ -7,7 +7,7 @@
 
 * {
     box-sizing: content-box;
-    /* From Google Fonts */
+    /* From Google Fonts*/
     font-family: "JetBrains Mono", monospace;
 }
 
@@ -87,9 +87,7 @@ nav ul li a:hover {
 }
 
 .toggle-label:hover {
-    /* updated */
     background-color: var(--text);
-    /* updated */
     color: var(--bg);
 }
 
@@ -100,7 +98,6 @@ nav ul li a:hover {
 }
 
 .card {
-    /* updated */
     background-color: var(--box);
     border: 2px dashed #787676f5;
     border-radius: 6px;
