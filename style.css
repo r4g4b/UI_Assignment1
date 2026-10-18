@@ -1,0 +1,368 @@
+:root {
+    --bg: #ffffff;
+    --text: #0a0a0a;
+    --box: #f0f0f0;
+}
+
+* {
+    box-sizing: content-box;
+    /* From Google Fonts */
+    font-family: "JetBrains Mono", monospace;
+}
+
+body {
+    margin: 0;
+    line-height: 1.5;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+h1,
+h2,
+h3 {
+    color: var(--text);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+header {
+    background-color: var(--box);
+    border-bottom: 2px solid #262626;
+    padding: 10px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.site-name {
+    margin: 0;
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--text);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+nav ul li a {
+    color: var(--text);
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+nav ul li a:hover {
+    background-color: var(--text);
+    color: var(--bg);
+}
+
+.toggle-label {
+    border: 1px solid #262626;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: var(--text);
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.toggle-label:hover {
+    background-color: var(--text);
+    color: var(--bg);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--box);
+    border: 2px dashed #787676f5;
+    border-radius: 6px;
+    padding: 10px;
+    transition: border-color 0.5s;
+}
+
+.card:hover {
+    border-color: #1a1a1a;
+    border-style: solid;
+}
+
+.card img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 9px;
+}
+
+.card h3 {
+    margin: 10px 0 5px;
+}
+
+.card p {
+    margin: 3px 0;
+}
+
+.category {
+    font-weight: bold;
+}
+
+.poster {
+    width: auto;
+    max-width: 500px;
+    max-height: 300px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.button,
+button {
+    display: inline-block;
+    background-color: #4f4e4e;
+    color: #ffffff;
+    border: none;
+    padding: 5px 5px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+.button:hover,
+button:hover {
+    background-color: #1f1f1f;
+}
+
+.table-view {
+    overflow-y: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--text);
+    color: var(--bg);
+    font-weight: bold;
+}
+
+.time {
+    font-weight: bold;
+}
+
+form {
+    max-width: 500px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form label:has(input[type="radio"]),
+form label:has(input[type="checkbox"]) {
+    font-weight: normal;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+input[type="file"],
+select,
+textarea {
+    width: 100%;
+    padding: 6px;
+    margin-top: 4px;
+    background-color: var(--bg);
+    color: var(--text);
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #7e5555;
+    outline: none;
+}
+
+input[type="range"] {
+    width: 100%;
+}
+
+footer {
+    background-color: var(--box);
+    border-top: 2px solid #262626;
+    padding: 15px;
+    text-align: center;
+}
+
+.social {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.social a {
+    background-color: #2e2e2e;
+    color: #fafafa;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 5px 5px;
+    transition: background-color 0.5s;
+}
+
+.social a:hover {
+    background-color: #0a0a0a;
+}
+
+/* Dark Mode */
+#dark-toggle {
+    display: none;
+}
+
+#dark-toggle:checked~#page {
+    --bg: #0f0f0f;
+    --text: #d9d7d7;
+    --box: #1f1f1f;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+#dark-toggle:checked~#page header,
+#dark-toggle:checked~#page .card,
+#dark-toggle:checked~#page footer {
+    border-color: #3a3a3a;
+}
+
+#dark-toggle:checked~#page header {
+    border-bottom-color: #cfcfcf;
+}
+
+#dark-toggle:checked~#page footer {
+    border-top-color: #cfcfcf;
+}
+
+#dark-toggle:checked~#page .toggle-label {
+    border-color: #cfcfcf;
+}
+
+#dark-toggle:checked~#page input[type="text"],
+#dark-toggle:checked~#page input[type="email"],
+#dark-toggle:checked~#page input[type="url"],
+#dark-toggle:checked~#page input[type="number"],
+#dark-toggle:checked~#page input[type="date"],
+#dark-toggle:checked~#page input[type="time"],
+#dark-toggle:checked~#page input[type="file"],
+#dark-toggle:checked~#page select,
+#dark-toggle:checked~#page textarea {
+    border-color: #3a3a3a;
+}
+
+#dark-toggle:checked~#page input:focus,
+#dark-toggle:checked~#page select:focus,
+#dark-toggle:checked~#page textarea:focus {
+    border-color: #cfcfcf;
+}
+
+#dark-toggle:checked~#page th,
+#dark-toggle:checked~#page td {
+    border-color: #3a3a3a;
+}
+
+#dark-toggle:checked~#page .button,
+#dark-toggle:checked~#page button {
+    background-color: #cfcfcf;
+    color: #161616;
+}
+
+#dark-toggle:checked~#page .button:hover,
+#dark-toggle:checked~#page button:hover {
+    background-color: #b5b5b5;
+}
+
+#dark-toggle:checked~#page .social a {
+    background-color: #cfcfcf;
+    color: #161616;
+}
+
+#dark-toggle:checked~#page .social a:hover {
+    background-color: #b5b5b5;
+}
+
+/* Desktop is the default layout */
+/* Phone */
+@media (min-width: 375px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .cards {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    main {
+        padding: 25px;
+    }
+}
+
+video {
+    width: 70%;
+    height: auto;
+    border-radius: 8px;
+}

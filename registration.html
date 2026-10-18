@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration - Campus Events Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Checkbox must come before #page because the CSS uses ~#page -->
+    <input type="checkbox" id="dark-toggle">
+
+    <div id="page">
+        <header>
+            <p class="site-name">Campus Events Guide</p>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="event-details.html">Event Details</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="registration.html">Registration</a></li>
+                </ul>
+            </nav>
+            <label for="dark-toggle" class="toggle-label">Dark mode</label>
+        </header>
+
+        <main>
+            <section>
+                <h1>Event Registration</h1>
+                <h2>Web Penetration Testing Workshop</h2>
+                <p>Date: 15 November 2026 | Time: 10:00 AM - 1:00 PM | Venue: Lab 3, Engineering Building</p>
+            </section>
+
+            <section>
+                <form>
+                    <label for="name">Attendee name</label>
+                    <input type="text" id="name" name="name" required maxlength="50" pattern="[A-Za-z ]{3,50}"
+                        title="Letters and spaces only, 3 to 50 characters">
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required maxlength="80">
+
+                    <label for="profile">GitHub or portfolio link</label>
+                    <input type="url" id="profile" name="profile" placeholder="https://github.com/yourname">
+
+                    <label for="guests">Number of guests (0 to 3)</label>
+                    <input type="number" id="guests" name="guests" min="0" max="3" value="0" required>
+
+                    <label for="skill">Security skill level (1 to 10)</label>
+                    <input type="range" id="skill" name="skill" min="1" max="10" value="2">
+
+                    <label for="date">Arrival date</label>
+                    <input type="date" id="date" name="date" min="2026-11-15" max="2026-11-15" value="2026-11-15"
+                        required>
+
+                    <label for="time">Arrival time</label>
+                    <input type="time" id="time" name="time" required>
+
+                    <label for="color">Favorite badge color</label>
+                    <input type="color" id="color" name="color" value="#0a7d3b">
+
+                    <label for="event">Event choice</label>
+                    <select id="event" name="event" required>
+                        <option value="">Choose an event</option>
+                        <option selected>Web Penetration Testing Workshop - 15 November 2026</option>
+                        <option>Exploit Development Bootcamp - 22 November 2026</option>
+                        <option>Capture The Flag Night - 29 November 2026</option>
+                    </select>
+
+                    <p><strong>Ticket type</strong></p>
+                    <label><input type="radio" name="ticket" value="student" checked> Student (free)</label>
+                    <label><input type="radio" name="ticket" value="guest"> Guest</label>
+
+                    <p><strong>What will you bring?</strong></p>
+                    <label><input type="checkbox" name="bring" value="laptop"> Laptop</label>
+                    <label><input type="checkbox" name="bring" value="kali"> Kali Linux VM ready</label>
+                    <label><input type="checkbox" name="agree" value="rules" required> I agree to use skills only in
+                        the lab</label>
+
+                    <label for="id-file">Upload student ID</label>
+                    <input type="file" id="id-file" name="id-file" accept="image/*,.pdf" required>
+
+                    <label for="access">Access needs</label>
+                    <textarea id="access" name="access" rows="4" maxlength="300"></textarea>
+
+                    <button type="submit">Register</button>
+                </form>
+            </section>
+
+            <section>
+                <h2>Contact Details</h2>
+                <ul>
+                    <li>Email: events@zewailcity.edu.eg</li>
+                    <li>Phone: 17742 (ZC hotline)</li>
+                    <li>Phone: 01033077738 / 01006214300 (Admission Office)</li>
+                    <li>Office: Student Affairs, Room 101</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Campus Events Guide</p>
+            <ul class="social">
+                <li><a href="https://github.com/YOURNAME">GitHub</a></li>
+                <li><a href="https://linkedin.com/in/YOURNAME">LinkedIn</a></li>
+                <li><a href="https://twitter.com/YOURNAME">Twitter</a></li>
+            </ul>
+        </footer>
+    </div>
+</body>
+
+</html>

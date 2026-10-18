@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Details - Campus Events Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Checkbox must come before #page because the CSS uses ~#page -->
+    <input type="checkbox" id="dark-toggle">
+
+    <div id="page">
+        <header>
+            <p class="site-name">Campus Events Guide</p>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="event-details.html">Event Details</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="registration.html">Registration</a></li>
+                </ul>
+            </nav>
+            <label for="dark-toggle" class="toggle-label">Dark mode</label>
+        </header>
+
+        <main>
+            <article>
+                <h1>Web Penetration Testing Workshop</h1>
+                <img class="poster" src="assets/pentest.jpeg" alt="Poster for the Web Penetration Testing Workshop">
+
+                <section>
+                    <h2>Description</h2>
+                    <p>A hands-on workshop where you learn how to find and exploit common web vulnerabilities such as
+                        SQL injection, XSS and broken authentication in a safe lab.</p>
+                </section>
+
+                <section>
+                    <h2>Event Information</h2>
+                    <ul>
+                        <li>Date: 15 November 2026</li>
+                        <li>Time: 10:00 AM - 1:00 PM</li>
+                        <li>Venue: Lab 3, Engineering Building</li>
+                        <li>Entry: Free for students (bring your student ID and a laptop)</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Agenda</h2>
+                    <ol>
+                        <li>10:00 - Introduction to web security</li>
+                        <li>10:30 - Recon and scanning</li>
+                        <li>11:15 - Exploiting SQL injection and XSS</li>
+                        <li>12:15 - Mini challenge</li>
+                        <li>12:45 - Q and A</li>
+                    </ol>
+                </section>
+
+                <section>
+                    <h2>Media</h2>
+                    <p>Listen to a short introduction:</p>
+                    <video controls>
+                        <source src="assets/pixelbin-video.mp4" type="video/mp4">
+                        Your browser does not support audio.
+                    </video>
+                </section>
+
+                <a class="button" href="registration.html">Register now</a>
+            </article>
+
+            <section>
+                <h2>Event Review</h2>
+                <form>
+                    <label for="rev-name">Your name</label>
+                    <input type="text" id="rev-name" name="rev-name" required maxlength="50">
+
+                    <label for="rev-rating">Rating</label>
+                    <select id="rev-rating" name="rev-rating" required>
+                        <option value="">Choose a rating</option>
+                        <option>5 - Excellent</option>
+                        <option>4 - Good</option>
+                        <option>3 - Average</option>
+                        <option>2 - Poor</option>
+                        <option>1 - Bad</option>
+                    </select>
+
+                    <label for="rev-text">Your review</label>
+                    <textarea id="rev-text" name="rev-text" rows="4" required maxlength="500"></textarea>
+
+                    <label for="rev-file">Upload a photo</label>
+                    <input type="file" id="rev-file" name="rev-file" accept="image/*">
+
+                    <button type="submit">Submit review</button>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Campus Events Guide</p>
+            <ul class="social">
+                <li><a href="https://github.com/r4g4b">GitHub</a></li>
+                <li><a href="https://linkedin.com/in/ahmed-ragab12">LinkedIn</a></li>
+                <li><a href="https://twitter.com/r4g4b">Twitter</a></li>
+            </ul>
+        </footer>
+    </div>
+</body>
+
+</html>

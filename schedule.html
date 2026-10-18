@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule - Campus Events Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Checkbox must come before #page because the CSS uses ~#page -->
+    <input type="checkbox" id="dark-toggle">
+
+    <div id="page">
+        <header>
+            <p class="site-name">Campus Events Guide</p>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="event-details.html">Event Details</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="registration.html">Registration</a></li>
+                </ul>
+            </nav>
+            <label for="dark-toggle" class="toggle-label">Dark mode</label>
+        </header>
+
+        <main>
+            <section>
+                <h1>Event Schedule</h1>
+                <div class="table-view">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Event</th>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Venue</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Web Penetration Testing Workshop</td>
+                                <td>15 November 2026</td>
+                                <td class="time">10:00 AM - 1:00 PM</td>
+                                <td>Lab 3, Engineering Building</td>
+                            </tr>
+                            <tr>
+                                <td>Exploit Development Bootcamp</td>
+                                <td>22 November 2026</td>
+                                <td class="time">2:00 PM - 5:00 PM</td>
+                                <td>Lab 1, Engineering Building</td>
+                            </tr>
+                            <tr>
+                                <td>Capture The Flag Night</td>
+                                <td>29 November 2026</td>
+                                <td class="time">6:00 PM - 10:00 PM</td>
+                                <td>Main Hall</td>
+                            </tr>
+                            <tr>
+                                <td>Reverse Engineering Talk (past)</td>
+                                <td>5 October 2026</td>
+                                <td class="time">12:00 PM - 1:30 PM</td>
+                                <td>Room 204</td>
+                            </tr>
+                            <tr>
+                                <td>Introduction to Cyber Security (past)</td>
+                                <td>20 September 2026</td>
+                                <td class="time">11:00 AM - 1:00 PM</td>
+                                <td>Lab 2, Engineering Building</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Campus Events Guide</p>
+            <ul class="social">
+                <li><a href="https://github.com/YOURNAME">GitHub</a></li>
+                <li><a href="https://linkedin.com/in/YOURNAME">LinkedIn</a></li>
+                <li><a href="https://twitter.com/YOURNAME">Twitter</a></li>
+            </ul>
+        </footer>
+    </div>
+</body>
+
+</html>
